@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventorySystem.view.AddPartController">
+   <children>
+      <VBox layoutX="52.0" layoutY="72.0" prefHeight="264.0" prefWidth="333.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="72.0">
+         <children>
+            <HBox prefHeight="44.0" prefWidth="333.0">
+               <children>
+                  <Label prefHeight="44.0" prefWidth="63.0" text="ID:" />
+                  <StackPane prefHeight="44.0" prefWidth="109.0">
+                     <children>
+                        <TextField fx:id="partID" prefHeight="26.0" prefWidth="118.0" promptText="Auto-Generated">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font></TextField>
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+            <HBox prefHeight="44.0" prefWidth="333.0">
+               <children>
+                  <Label prefHeight="44.0" prefWidth="63.0" text="Name:" />
+                  <StackPane prefHeight="44.0" prefWidth="114.0">
+                     <children>
+                        <TextField fx:id="partName" prefHeight="26.0" prefWidth="109.0" promptText="Part Name">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </StackPane>
+               </children></HBox>
+            <HBox prefHeight="44.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="44.0" prefWidth="63.0" text="Inv:" />
+                  <StackPane prefHeight="44.0" prefWidth="114.0">
+                     <children>
+                        <TextField fx:id="partInv" promptText="Inv">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+            <HBox prefHeight="44.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="44.0" prefWidth="63.0" text="Price/Cost:" />
+                  <StackPane prefHeight="44.0" prefWidth="114.0">
+                     <children>
+                        <TextField fx:id="partPrice" promptText="Price/Cost">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font></TextField>
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+            <HBox prefHeight="44.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="44.0" prefWidth="63.0" text="Max:" />
+                  <StackPane prefHeight="44.0" prefWidth="114.0">
+                     <children>
+                        <TextField fx:id="partMax" promptText="Max">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font></TextField>
+                     </children>
+                  </StackPane>
+                  <Label prefHeight="44.0" prefWidth="40.0" text="Min:" />
+                  <StackPane prefHeight="42.0" prefWidth="114.0">
+                     <children>
+                        <TextField fx:id="partMin" prefHeight="26.0" prefWidth="94.0" promptText="Min">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font></TextField>
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+            <HBox fx:id="companyNameField" prefHeight="44.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="44.0" prefWidth="63.0" text="Company Name:" />
+                  <StackPane prefHeight="44.0" prefWidth="114.0">
+                     <children>
+                        <TextField fx:id="partCompanyName" promptText="Comp Nam">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font></TextField>
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+            <HBox fx:id="machineField" prefHeight="41.0" prefWidth="334.0">
+               <children>
+                  <Label prefHeight="44.0" prefWidth="63.0" text="Machine ID:" />
+                  <StackPane prefHeight="44.0" prefWidth="114.0">
+                     <children>
+                        <TextField fx:id="partMachineId" promptText="Machine ID">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox layoutX="14.0" layoutY="12.0" prefHeight="62.0" prefWidth="374.0">
+         <children>
+            <Label prefHeight="62.0" prefWidth="114.0" text="Add Part">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="inHouse" mnemonicParsing="false" onAction="#outsourcedBttnChanged" prefHeight="62.0" prefWidth="103.0" text="In-House" />
+            <RadioButton fx:id="outsourced" mnemonicParsing="false" onAction="#outsourcedBttnChanged" prefHeight="62.0" prefWidth="131.0" text="Outsourced" />
+         </children>
+      </HBox>
+      <ButtonBar layoutX="169.0" layoutY="330.0" prefHeight="40.0" prefWidth="190.0">
+        <buttons>
+            <Button mnemonicParsing="false" onAction="#saveButtonPushed" text="Save" />
+          <Button mnemonicParsing="false" onAction="#cancelBttnPushed" text="Cancel" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

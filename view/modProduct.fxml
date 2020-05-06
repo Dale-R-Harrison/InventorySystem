@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventorySystem.view.ModProductController">
+    <children>
+        <HBox layoutX="19.0" layoutY="9.0" prefHeight="382.0" prefWidth="757.0">
+            <children>
+                <VBox prefHeight="382.0" prefWidth="273.0">
+                    <children>
+                        <Label prefHeight="82.0" prefWidth="264.0" text="Modify Product">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <HBox prefHeight="38.0" prefWidth="205.0">
+                            <children>
+                                <Label prefHeight="38.0" prefWidth="60.0" text="ID:">
+                                    <padding>
+                                        <Insets left="5.0" />
+                                    </padding>
+                                </Label>
+                                <StackPane prefHeight="38.0" prefWidth="105.0">
+                                    <children>
+                                        <TextField fx:id="productId" prefHeight="26.0" prefWidth="108.0" />
+                                    </children>
+                                </StackPane>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="38.0" prefWidth="246.0">
+                            <children>
+                                <Label prefHeight="38.0" prefWidth="60.0" text="Name:">
+                                    <padding>
+                                        <Insets left="5.0" />
+                                    </padding>
+                                </Label>
+                                <StackPane prefHeight="38.0" prefWidth="106.0">
+                                    <children>
+                                        <TextField fx:id="productName" prefHeight="26.0" prefWidth="90.0" />
+                                    </children>
+                                </StackPane>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="38.0" prefWidth="246.0">
+                            <children>
+                                <Label prefHeight="38.0" prefWidth="60.0" text="Inv:">
+                                    <padding>
+                                        <Insets left="5.0" />
+                                    </padding>
+                                </Label>
+                                <StackPane prefHeight="38.0" prefWidth="70.0">
+                                    <children>
+                                        <TextField fx:id="productInv" />
+                                    </children>
+                                </StackPane>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="38.0" prefWidth="246.0">
+                            <children>
+                                <Label prefHeight="38.0" prefWidth="60.0" text="Price:">
+                                    <padding>
+                                        <Insets left="5.0" />
+                                    </padding>
+                                </Label>
+                                <StackPane prefHeight="38.0" prefWidth="70.0">
+                                    <children>
+                                        <TextField fx:id="productPrice" />
+                                    </children>
+                                </StackPane>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="38.0" prefWidth="246.0">
+                            <children>
+                                <Label prefHeight="38.0" prefWidth="60.0" text="Max:">
+                                    <padding>
+                                        <Insets left="5.0" />
+                                    </padding>
+                                </Label>
+                                <StackPane prefHeight="38.0" prefWidth="74.0">
+                                    <children>
+                                        <TextField fx:id="productMax" prefHeight="26.0" prefWidth="79.0" />
+                                    </children>
+                                </StackPane>
+                                <Label prefHeight="38.0" prefWidth="46.0" text="Min:">
+                                    <padding>
+                                        <Insets left="5.0" />
+                                    </padding>
+                                </Label>
+                                <StackPane prefHeight="38.0" prefWidth="75.0">
+                                    <children>
+                                        <TextField fx:id="productMin" prefHeight="26.0" prefWidth="69.0" />
+                                    </children>
+                                </StackPane>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox prefHeight="382.0" prefWidth="434.0">
+                    <children>
+                        <AnchorPane prefHeight="58.0" prefWidth="450.0">
+                            <children>
+                                <HBox layoutX="74.0" layoutY="-1.0" prefHeight="59.0" prefWidth="264.0" spacing="5.0">
+                                    <children>
+                                        <StackPane prefHeight="59.0" prefWidth="86.0">
+                                            <children>
+                                                <Button mnemonicParsing="false" onAction="#partSearchBttnPressed" prefHeight="26.0" prefWidth="119.0" text="Search" />
+                                            </children>
+                                        </StackPane>
+                                        <StackPane prefHeight="59.0" prefWidth="146.0">
+                                            <children>
+                                                <TextField fx:id="partSearch" />
+                                            </children>
+                                        </StackPane>
+                                    </children></HBox>
+                            </children>
+                        </AnchorPane>
+                        <TableView fx:id="allPartsTable" prefHeight="104.0" prefWidth="426.0">
+                            <columns>
+                                <TableColumn fx:id="allPartsIdColumn" prefWidth="75.0" text="Part ID" />
+                                <TableColumn fx:id="allPartsNameColumn" prefWidth="75.0" text="Part Name" />
+                                <TableColumn fx:id="allPartsStockColumn" prefWidth="75.0" text="Inventory Level" />
+                                <TableColumn fx:id="allPartsPriceColumn" prefWidth="75.0" text="Price Per Unit" />
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                        </TableView>
+                        <AnchorPane prefHeight="38.0" prefWidth="401.0">
+                            <children>
+                                <StackPane layoutX="292.0" prefHeight="38.0" prefWidth="106.0">
+                                    <children>
+                                        <Button mnemonicParsing="false" onAction="#addBttnPushed" prefHeight="26.0" prefWidth="64.0" text="Add" />
+                                    </children>
+                                </StackPane>
+                            </children>
+                        </AnchorPane>
+                        <TableView fx:id="addPartsTable" prefHeight="96.0" prefWidth="398.0">
+                            <columns>
+                                <TableColumn fx:id="addPartsIdColumn" prefWidth="75.0" text="Part ID" />
+                                <TableColumn fx:id="addPartsNameColumn" prefWidth="75.0" text="Part Name" />
+                                <TableColumn fx:id="addPartsStockColumn" prefWidth="75.0" text="Inventory Level" />
+                                <TableColumn fx:id="addPartsPriceColumn" prefWidth="75.0" text="Price Per Unit" />
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                        </TableView>
+                        <AnchorPane prefHeight="32.0" prefWidth="398.0">
+                            <children>
+                                <Button layoutX="310.0" layoutY="5.0" mnemonicParsing="false" onAction="#delBttnPushed" prefHeight="26.0" prefWidth="70.0" text="Delete" />
+                            </children></AnchorPane>
+                        <AnchorPane prefHeight="36.0" prefWidth="398.0">
+                            <children>
+                                <ButtonBar layoutX="184.0" layoutY="-2.0" prefHeight="40.0" prefWidth="200.0">
+                                    <buttons>
+                                        <Button minWidth="51.0" mnemonicParsing="false" onAction="#saveBttnPushed" prefHeight="26.0" text="Save" />
+                                        <Button mnemonicParsing="false" onAction="#cancelBttnPushed" text="Cancel" />
+                                    </buttons>
+                                </ButtonBar>
+                            </children></AnchorPane>
+                    </children></VBox>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
